@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head><tile>JSON- Javascript object notation</tile></head>
+    <body>
+        <center>
+            <h1>Create your own superhero.</h1>
+            <p>Enter the details of your superhero</p>
+            <label>Name: <input type="text" id="name"></label><br>
+            <label>Age: <input type="number" id="age"></label><br>
+            <label>Power: <input type="text" id="power"></label><br>
+            <label>Superhero code <input type="password" id="code"></label><br><br>
+            <button onclick="createSuperhero()">Show superhero JSON</button>
+            <h2>Your superhero JSON:</h2>
+            <pre id="output"></pre>
+            <script>
+                function createSuperhero() {
+                    //Get the values
+                    var name = document.getElementById("name").value;
+                    var age = document.getElementbyId("age").value;
+                    var power = document.getElementById("power").value;
+                    var code = document.getElementById("code").value;
+
+                    var superhero = {
+                        name: name,
+                        age: age,
+                        power: power,
+                        code: code,
+                    };
+                    document.getElementById("output").textContent JSON.stringify
+                    (superhero, null, 2);
+                
+                }
+            </script>
+
+        </center>
+    </body>
+</html>
